@@ -77,6 +77,12 @@ target 'react_native_arch' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+
+  pod 'react-native-location', :path => '../node_modules/react-native-location'
+
+  pod 'react-native-maps', :path => '../node_modules/react-native-maps'
+
   target 'react_native_archTests' do
     inherit! :complete
     # Pods for testing

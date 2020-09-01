@@ -1,10 +1,12 @@
-import { IS_SPLASH, USER_TOKEN } from "../action/Action";
+import { IS_SPLASH, USER_TOKEN, USER_CURRENT_LOCATION } from "../action/Action";
 
 const initialState = {
     isSplash: true,
-    userToken: null
+    userToken: null,
+    userCurrentLocation:{}
 }
 export default CommonReducers = (state = initialState, action) => {
+    console.log('action',action)
     switch (action.type) {
         case IS_SPLASH:
             return {
@@ -16,6 +18,12 @@ export default CommonReducers = (state = initialState, action) => {
                 ...state,
                 userToken: action.token
             };
+        case USER_CURRENT_LOCATION:
+            return {
+                ...state,
+                userCurrentLocation: action.location
+            };
+
         default:
             return state;
     }
